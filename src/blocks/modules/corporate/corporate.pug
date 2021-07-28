@@ -1,9 +1,85 @@
 mixin corporate-regform()
-  form.b-corporate-registration(action="")&attributes(attributes)
+  form.b-corporate-registration(action="#" data-validate='Y')
+    h2 Быстрая регистрация для юридических лиц
+    p На указанный e-mail придет запрос на подтверждение регистрации.
     fieldset
-      .field
-        label Имя
-        input(type="text")
-      .field
-        label Email
-        input(type="email")
+      label.b-simple-form__field
+        .b-simple-form__field-label Имя
+        .b-simple-form__field-inputs
+          input(type="text" name="name" required)
+
+      label.b-simple-form__field
+        .b-simple-form__field-label Email
+        .b-simple-form__field-inputs
+          input.email(type="email" name="email" required)
+
+      label.b-simple-form__field
+        .b-simple-form__field-label Придумайте пароль
+        .b-simple-form__field-inputs
+          +password-input()
+
+      label.b-simple-form__field
+        .b-simple-form__field-label Повторите пароль
+        .b-simple-form__field-inputs
+          +password-input()
+
+      label.b-simple-form__field
+        .b-simple-form__field-label Название организации
+        .b-simple-form__field-inputs
+          input(type="text" name="org" required)
+
+      label.b-simple-form__field
+        .b-simple-form__field-label Телефон
+        .b-simple-form__field-inputs
+          input(type="text" name="phone" data-mask="phone")
+
+      label.b-simple-form__field
+        .b-simple-form__field-label Юридический адрес
+        .b-simple-form__field-inputs
+          input(type="text" name="jur")
+
+      label.b-simple-form__field
+        .b-simple-form__field-label Фактический адрес
+        .b-simple-form__field-inputs
+          input(type="text" name="fact")
+
+      .b-simple-form__group
+        label.b-simple-form__field
+          .b-simple-form__field-label ИНН
+          .b-simple-form__field-inputs
+            input(type="number" name="inn")
+
+        label.b-simple-form__field
+          .b-simple-form__field-label КПП
+          .b-simple-form__field-inputs
+            input(type="number" name="kpp")
+
+      label.b-simple-form__field
+        .b-simple-form__field-label Название банка организации
+        .b-simple-form__field-inputs
+          input(type="text" name="bank")
+
+      label.b-simple-form__field
+        .b-simple-form__field-label Расчетный счет
+        .b-simple-form__field-inputs
+          input(type="number" name="bank-account")
+
+      label.b-simple-form__field
+        .b-simple-form__field-label Корреспондентский счет
+        .b-simple-form__field-inputs
+          input(type="number" name="bank-corr")
+
+      label.b-simple-form__field
+        .b-simple-form__field-label БИК
+        .b-simple-form__field-inputs
+          input(type="number" name="bank-bik")
+
+    .b-simple-form__field
+      ul.b-simple-form__list
+        li.b-simple-form__list-item
+          +checkbox(' Соглашаюсь с <a href="#" class="b-simple-form__field-link">политикой</a> обработки и защиты персональных данных')(checked)
+          input.checkbox-vadidator(type='text' required)
+
+    label.b-simple-form__field(style="display: inline-block")
+      .b-simple-form__field-inputs
+        input.button(type="submit" value="Зарегистрироваться")

@@ -27,20 +27,92 @@
       line-height: 1.3;
     }
   }
+  &-content {
+    max-width: 66%;
+  }
   &-section {
     padding: 34px;
-    background: #f1f1f1;
+    &--gray {
+      background: #f8f8f8;
+      border: 1px solid #f1f1f1;
+    }
+  }
+  &-registration {
+    h2 {
+      margin: 0 0 17px 0;
+    }
+    p {
+      font-weight: 300;
+    }
+    fieldset {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-gap: 18px;
+      margin: 0 0 18px 0;
+      padding: 0;
+      border: none;
+    }
+    label {
+      display: block;
+      font-family: Proxima Nova;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    @each $type in (text, email, password, number) {
+      input[type="#{$type}"] {
+        width: 100%;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type=number] {
+      -moz-appearance:textfield;
+    }
+    .b-simple-form__field {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .b-simple-form__group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-gap: 18px;
+    }
+    .field {
+      position: relative;
+      width: 100%;
+    }
   }
   @include w1024 {
     &-hero {
       padding: 32px;
       background-position: top right 35%;
     }
+    &-content {
+      max-width: 100%;
+    }
+    &-section {
+      padding: 24px;
+    }
   }
   @include w768 {
     &-hero {
       padding: 24px;
       background-position: top right 35%;
+    }
+    &-content {
+      max-width: 100%;
+    }
+    &-section {
+      padding: 24px;
     }
   }
   @include w480 {
@@ -54,6 +126,9 @@
       &__desc {
         max-width: 65%;
       }
+    }
+    &-section {
+      padding: 16px;
     }
   }
 }
