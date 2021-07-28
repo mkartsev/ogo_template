@@ -1,3 +1,59 @@
 .b-corporate {
-
+  &-hero {
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    padding: 90px 75px;
+    font-family: 'Proxima Nova';
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__title {
+      display: block;
+      max-width: 50%;
+      margin-bottom: 17px;
+      color: #1d1d1d;
+      font-size: 44px;
+      font-weight: 600;
+      line-height: 1.15;
+    }
+    &__desc {
+      display: block;
+      max-width: 50%;
+      margin-bottom: 30px;
+      color: #1d1d1d;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.3;
+    }
+  }
+  &-section {
+    padding: 34px;
+    background: #f1f1f1;
+  }
+  @include w1024 {
+    &-hero {
+      padding: 32px;
+      background-position: top right 35%;
+    }
+  }
+  @include w768 {
+    &-hero {
+      padding: 24px;
+      background-position: top right 35%;
+    }
+  }
+  @include w480 {
+    &-hero {
+      padding: 16px;
+      background-position: top right 54%;
+      &__title {
+        max-width: 65%;
+        font-size: 20px;
+      }
+      &__desc {
+        max-width: 65%;
+      }
+    }
+  }
 }

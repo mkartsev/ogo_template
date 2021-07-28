@@ -1,0 +1,4 @@
+// guarantee
+$(function () {
+  // code here...
+});

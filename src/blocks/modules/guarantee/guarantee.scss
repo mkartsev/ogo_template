@@ -1,0 +1,97 @@
+.b-guarantee {
+  &-hero {
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    padding: 72px 75px;
+    font-family: 'Proxima Nova';
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__title {
+      display: block;
+      max-width: 60%;
+      margin-bottom: 17px;
+      color: #1d1d1d;
+      font-size: 44px;
+      font-weight: 600;
+      line-height: 1.15;
+    }
+    &__desc {
+      display: block;
+      max-width: 60%;
+      margin-bottom: 30px;
+      color: #1d1d1d;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.3;
+    }
+    &__footer {
+      max-width: 60%;
+    }
+  }
+  &-section {
+    padding: 34px;
+    background: #f8f8f8;
+    border: 1px solid #f1f1f1;
+  }
+  &-block {
+    margin-bottom: 14px;
+    padding: 18px 0 18px 20px;
+    background: #fff;
+    &__title {
+      font-family: 'Proxima Nova';
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 28px;
+    }
+    &__body {
+      margin-top: 20px;
+      padding-right: 20px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 22px;
+    }
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+  @include w1024 {
+    &-hero {
+      padding: 32px;
+      background-position: center right 35%;
+    }
+    &-section {
+      padding: 24px;
+    }
+  }
+  @include w768 {
+    &-hero {
+      padding: 24px;
+      background-position: center right 35%;
+    }
+    &-section {
+      padding: 24px;
+    }
+  }
+  @include w480 {
+    &-hero {
+      padding: 16px;
+      background-position: center right 35%;
+      &__title {
+        max-width: 65%;
+        font-size: 20px;
+      }
+      &__desc {
+        max-width: 65%;
+      }
+      &__footer {
+        max-width: 65%;
+      }
+    }
+    &-section {
+      padding: 16px;
+    }
+  }
+}
+

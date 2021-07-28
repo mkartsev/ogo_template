@@ -18,8 +18,7 @@ block caption
 
 block inner-content
   section
-    .b-corporate-hero
-      img(src="assets/img/content/corporate/background.jpg", alt="").b-corporate-hero__image
+    .b-corporate-hero(style="background-image: url(assets/img/content/corporate/background.jpg)")
       .b-corporate-hero__title Корпоративным клиентам
       .b-corporate-hero__desc
         | Очень крутые предложения и немного эксключивного бла бла бла специально для вас, уважаемые партнеры!
@@ -29,5 +28,5 @@ block inner-content
     p Или, если хотите, отправьте перечень необходимых товаров на нашу электронную почту corp@ogo1.ru. Пожалуйста, не забудьте указать в письме реквизиты организации, для которой мы оформим счет.
     p Если вы еще не зарегистрировались на нашем сайте, заполните форму - после этого вам не нужно будет каждый раз указывать реквизиты при оформлении заказа.
   
-  section.b-section.b-section--lightgray
+  section.b-corporate-section
     +corporate-regform()
