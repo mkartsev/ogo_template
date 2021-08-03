@@ -1076,19 +1076,6 @@ $(function () {
   });
 });
 
-// Одиночная плитка категории
-$(function () {
-  $(".b-category-plate").livequery(function () {
-    var $context = $(this);
-
-    $context.adaptBlock({
-      maxWidth: {
-        220: "_mx220"
-      }
-    });
-  });
-});
-
 // Меню в подкатегории каталога
 $(function () {
   $(".b-category-menu").livequery(function () {
@@ -1129,6 +1116,19 @@ $(function () {
     initExpanders();
 
     $moreBtns.on("click", toggleExpander);
+  });
+});
+
+// Одиночная плитка категории
+$(function () {
+  $(".b-category-plate").livequery(function () {
+    var $context = $(this);
+
+    $context.adaptBlock({
+      maxWidth: {
+        220: "_mx220"
+      }
+    });
   });
 });
 
@@ -1606,6 +1606,10 @@ $(function () {
   // code here...
 });
 
+// corporate
+$(function () {
+  // code here...
+});
 // Выбор даты
 $(function () {
   $(".b-date-select").each(function () {
@@ -2747,6 +2751,10 @@ $(function () {
   // code here...
 });
 
+// guarantee
+$(function () {
+  // code here...
+});
 // comments
 $(function () {
   // code here...
@@ -3976,6 +3984,19 @@ $(function () {
   });
 });
 
+// Получатель заказа
+$(function () {
+  $(".b-order-recipient").livequery(function () {
+    var $context = $(this);
+
+    $context.adaptBlock({
+      maxWidth: {
+        520: "_mx520"
+      }
+    });
+  });
+});
+
 // Заверешние регистрации после оформления
 $(function () {
   $(".b-order-registration").livequery(function () {
@@ -3985,19 +4006,6 @@ $(function () {
       maxWidth: {
         820: "_mx820",
         420: "_mx420"
-      }
-    });
-  });
-});
-
-// Получатель заказа
-$(function () {
-  $(".b-order-recipient").livequery(function () {
-    var $context = $(this);
-
-    $context.adaptBlock({
-      maxWidth: {
-        520: "_mx520"
       }
     });
   });
@@ -4391,35 +4399,6 @@ $(function () {
   });
 });
 
-// Ссылки на содержимое карточки продукта
-$(function () {
-  $(".b-product-links").livequery(function () {
-    var $context = $(this);
-    var $links = $(".b-product-links__link", $context);
-
-    function slowScroll (e) {
-      var $this = $(this);
-      var $target = $($this.attr("href"));
-
-      if($target.length == 0) return;
-
-      $("body").animate({
-        scrollTop: ($target.offset().top - 80)
-      }, 300);
-
-      e.preventDefault();
-    }
-
-    $links.on("click", slowScroll);
-
-    $context.adaptBlock({
-      maxWidth: {
-        720: "_mx720"
-      }
-    });
-  });
-});
-
 // Изображения в карточке товара
 $(function () {
   
@@ -4494,6 +4473,35 @@ $(function () {
     ]
   });
 });
+// Ссылки на содержимое карточки продукта
+$(function () {
+  $(".b-product-links").livequery(function () {
+    var $context = $(this);
+    var $links = $(".b-product-links__link", $context);
+
+    function slowScroll (e) {
+      var $this = $(this);
+      var $target = $($this.attr("href"));
+
+      if($target.length == 0) return;
+
+      $("body").animate({
+        scrollTop: ($target.offset().top - 80)
+      }, 300);
+
+      e.preventDefault();
+    }
+
+    $links.on("click", slowScroll);
+
+    $context.adaptBlock({
+      maxWidth: {
+        720: "_mx720"
+      }
+    });
+  });
+});
+
 // Лейблы на карточке товара
 $(function () {
  
@@ -5244,6 +5252,11 @@ $(function () {
   });
 });
 
+// comments
+$(function () {
+  // code here...
+});
+
 // Привязка аккаунта к соцсетям
 $(function () {
   $(".b-socials-bind").livequery(function () {
@@ -5302,11 +5315,6 @@ $(function () {
       }
     });
   });
-});
-
-// comments
-$(function () {
-  // code here...
 });
 
 // Информация о наличии товара
@@ -6065,6 +6073,18 @@ $(function () {
   // code here...
 });
 
+// Промоблок 1
+$(function () {
+  $(".b-promo-block1").livequery(function () {
+    var $context = $(this);
+    $context.adaptBlock({
+      maxWidth: {
+        400: "_mx400"
+      }
+    });
+  });
+});
+
 // Промоблок 2
 $(function () {
   $(".b-promo-block2").livequery(function () {
@@ -6090,18 +6110,6 @@ $(function () {
       maxWidth: {
         780: "_mx780",
         700: "_mx700",
-      }
-    });
-  });
-});
-
-// Промоблок 1
-$(function () {
-  $(".b-promo-block1").livequery(function () {
-    var $context = $(this);
-    $context.adaptBlock({
-      maxWidth: {
-        400: "_mx400"
       }
     });
   });
